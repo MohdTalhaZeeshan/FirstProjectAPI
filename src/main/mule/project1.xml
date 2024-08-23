@@ -10,6 +10,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	</http:listener-config>
 	<flow name="project1Flow" doc:id="378b87a2-ef89-4bb9-83f1-6c6a77354217" >
 		<http:listener doc:name="Listener" doc:id="af3b0450-14f5-47df-99cc-e456f5aa8d44" config-ref="HTTP_Listener_config" path="hello"/>
+		<logger level="INFO" doc:name="Logger" doc:id="fd0658da-2910-4506-a51a-e86cb93e7469" message='#["Hello Mule"]'/>
 		<ee:transform doc:name="Transform Message" doc:id="25990f51-359d-4da9-8e2a-0f66a357e37e" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
